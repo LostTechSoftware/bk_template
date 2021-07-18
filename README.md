@@ -5,7 +5,7 @@
     <img src="images/icon.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">FoodZilla Backend Client</h3>
+  <h3 align="center">FoodZilla Backend Template</h3>
 
   <p align="center">
     Uma infraestrutura poderosa
@@ -127,4 +127,3 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [product-screenshot]: images/screenshot.png
-# bk_template
