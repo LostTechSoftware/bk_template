@@ -1,15 +1,15 @@
+
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/icon.png" alt="Logo" width="80" height="80">
+  <a>
+    <img src="https://user-images.githubusercontent.com/37854189/127693722-90fe6ea7-60c9-40d5-9a53-9e5e5d971866.jpg">
   </a>
+  
 
   <h3 align="center">FoodZilla Back-end Template</h3>
 
   <p align="center">
-    Você é o delivery que você escolhe
-    <br />
     <a href="https://bk.foodzilla.com.br">Produção</a>
     ·
     <a href="https://staging-bk.foodzilla.com.br">Staging</a>
