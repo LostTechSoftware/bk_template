@@ -14,9 +14,10 @@
   ],
   "scripts": {
     "staging": "nodemon ./src/index.ts",
+    "start":"sucrase-node ./src/index.ts",
     "eslint:check": "eslint 'src/**/*.{ts,tsx}' --fix",
     "format": "prettier \"./src/**/*.ts\" --write",
-    "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored",
+    "build": "sucrase ./src -d ./dist --transforms typescript,imports",
     "console:staging": "nodemon --experimental-repl-await ./src/console.js",
     "console:prod": "node --experimental-repl-await ./src/console.js"
   },
@@ -48,16 +49,13 @@
     "request-ip": "2.1.3",
     "sqs-consumer": "5.5.0",
     "sucrase": "3.20.1",
+    "tsc": "^2.0.3",
     "typescript": "4.3.5"
   },
   "devDependencies": {
-    "@babel/cli": "7.14.8",
-    "@babel/core": "7.15.0",
-    "@babel/node": "7.14.9",
-    "@babel/preset-env": "7.15.0",
-    "@babel/preset-typescript": "7.15.0",
+    "@babel/core": "7.13.10",
+    "@babel/preset-env": "7.13.10",
     "@commitlint/cli": "12.1.1",
-    "babel-plugin-module-resolver": "4.1.0",
     "@commitlint/config-conventional": "12.1.1",
     "@shelf/jest-mongodb": "1.2.4",
     "@types/cors": "2.8.6",
