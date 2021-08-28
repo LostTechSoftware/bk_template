@@ -3,7 +3,7 @@ const { v4: uuidv4 } = require('uuid')
 
 const logs = require('../logs')
 
-const index = async (app) => {
+const middlewaresLogs = async (app) => {
   app.all('*', (req, res, next) => {
     const requestId = req.headers['x-request-id'] || uuidv4()
 
@@ -18,4 +18,4 @@ const index = async (app) => {
   })
 }
 
-module.exports = index
+module.exports = middlewaresLogs
