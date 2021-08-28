@@ -1,22 +1,19 @@
 branch-defaults:
-  master:
-    environment: backend-env
-    group_suffix: null
+  staging:
+    environment: production
 environment-defaults:
-  backend-env:
+  production:
     branch: null
     repository: null
 global:
-  application_name: Backend
-  branch: null
+  application_name: bk-template
   default_ec2_keyname: null
-  default_platform: Node.js 12 running on 64bit Amazon Linux 2
+  default_platform: Node.js 14 running on 64bit Amazon Linux 2
   default_region: us-east-2
   include_git_submodules: true
   instance_profile: null
   platform_name: null
   platform_version: null
   profile: eb-cli
-  repository: null
   sc: git
   workspace_type: Application
