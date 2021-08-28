@@ -1,6 +1,7 @@
-const Sentry = require('@sentry/node')
-const { Severity, LoggerConfig, CoralogixLogger, Log } = require('coralogix-logger')
-const getRequestId = require('../getRequestId')
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import * as Sentry from '@sentry/node'
+import { Severity, LoggerConfig, CoralogixLogger, Log } from 'coralogix-logger'
+import getRequestId from '../getRequestId'
 
 CoralogixLogger.configure(
   new LoggerConfig({
@@ -12,9 +13,9 @@ CoralogixLogger.configure(
 
 const logger = new CoralogixLogger('Logger')
 
-module.exports = {
+export default {
   // Send warning log to Coralogix
-  warn: (data) => {
+  warn: (data: string): void => {
     const text = { data, request_id: getRequestId() }
 
     console.log(text)
@@ -30,7 +31,7 @@ module.exports = {
   },
 
   // Send error log to Coralogix
-  error: (data) => {
+  error: (data: string): void => {
     const text = { data, request_id: getRequestId() }
 
     console.log(text)
@@ -49,7 +50,7 @@ module.exports = {
   },
 
   // Send information log to Coralogix
-  info: (data) => {
+  info: (data: string): void => {
     const text = { data, request_id: getRequestId() }
 
     console.log(text)
@@ -65,5 +66,5 @@ module.exports = {
   },
 
   // Transform object in string with json stringify
-  beautify: (data) => JSON.stringify(data, undefined, 2),
+  beautify: (data: any): string => JSON.stringify(data, undefined, 2),
 }

@@ -1,24 +1,17 @@
-const fs = require('fs')
-const moment = require('moment')
-const logger = require('js-logger')
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+import fs from 'fs'
+import moment from 'moment'
+import logger from 'js-logger'
 
-/**
- * This template have some basic structure that will be useful to most scripts, copy and use it
- */
-module.exports = async () => {
+export default async (): Promise<void> => {
   // await scripts.defaultScriptTemplate()
-  // Log your results
   const result = []
-  // Log your errors
   const errors = []
-
-  // do some awesome stuff
 
   logger.info(`[Successful executions] ${result.length}`)
   logger.info(`[Failed executions] ${errors.length}`)
 
-  // change the name of your script
-  const scriptLogIdentifier = `batata_script`
+  const scriptLogIdentifier = 'batata_script'
 
   const uniqueIdentifier = moment().format()
   const fsOptions = { encoding: 'utf8', flag: 'w' }
